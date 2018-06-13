@@ -9,7 +9,7 @@ This is a driver for a Newhaven 1.8" TFT display (http://www.newhavendisplay.com
 
 The driver init code sets up the 8 bit parallel interface to the color mode 18 bit RGB with 6/6/6 bits for the red/green/blue pixel values.
 
-The pixel data in the framebuffer is 32 bits per pixel, 8/8/8/8 bits for the alpha/red/green/blue pixel values. This 32 bit data is split into 3x 8 bytes (only the top most 6 bits of each byte is used internally in the driver IC) and sent to the TFT via the GPIOs with a frame rate of around 34 fps.
+The pixel data in the framebuffer is 32 bits per pixel, 8/8/8/8 bits for the alpha/red/green/blue pixel values. This 32 bit data is split into 3x 8 bytes (only the topmost 6 bits of each byte are used internally by the driver IC) and sent to the TFT via the GPIOs with a frame rate of around 34 fps.
 
 ## Physical setup
 
@@ -22,7 +22,7 @@ The pixel data in the framebuffer is 32 bits per pixel, 8/8/8/8 bits for the alp
 
 ### Connecting the NHD TFT to the Raspberry Pi
 
-Connect the **TFT Pins** from the FFC40 breakout to the **Raspberry's GPIO** (I used simple jumper wires) like this:  
+Connect the **TFT Pins** from the breakout to the **Raspberry's GPIO** (I used simple jumper wires) like this:  
 ```
           TFT   ARTY  
     ---------   ---------   
